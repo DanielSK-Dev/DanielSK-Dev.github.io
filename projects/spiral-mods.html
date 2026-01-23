@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Reverse-Engineering Tooling — Case Study</title>
+
+  <meta name="description" content="Daniel Kline — CS + Cybersecurity. Code-first projects: P2P networking, tooling, reverse engineering, and software engineering." />
+  <meta property="og:title" content="Reverse-Engineering Tooling — Case Study" />
+  <meta property="og:description" content="Code-first projects and case studies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../assets/img/placeholder.svg" />
+
+  <link rel="icon" href="../assets/img/placeholder.svg" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<header class="nav">
+  <div class="container">
+    <div class="navInner">
+      <a class="brand" href="../index.html">
+        <span class="brandDot" aria-hidden="true"></span>
+        <span>Daniel Kline</span>
+      </a>
+
+      <nav class="navLinks" aria-label="Primary">
+        <a data-nav href="../index.html">Home</a>
+        <a data-nav href="../projects/index.html">Projects</a>
+        <a data-nav href="../skills/index.html">Skills</a>
+        <a data-nav href="../resume/index.html">Resume + Contact</a>
+      </nav>
+
+      <div class="navActions">
+        <button id="themeToggle" class="btn iconBtn ghost" aria-label="Switch to light mode" title="Toggle theme">
+          <span aria-hidden="true">🌓</span>
+        </button>
+        <button id="mobileToggle" class="btn iconBtn hamburger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu" title="Menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobileMenu" aria-label="Mobile">
+      <a data-nav href="../index.html">Home</a>
+      <a data-nav href="../projects/index.html">Projects</a>
+      <a data-nav href="../skills/index.html">Skills</a>
+      <a data-nav href="../resume/index.html">Resume + Contact</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <div class="prose">
+      <div class="kicker"><span aria-hidden="true">🧩</span><span>Case Study</span></div>
+      <h1>Reverse-Engineering Tooling (Java)</h1>
+      <p class="small m0">
+        Timeline: PLACEHOLDER (e.g., 2024–2026) · Role: Solo developer · Focus: stability, compatibility, instrumentation.
+      </p>
+
+      <div class="callout placeholder mt22">
+        <b>PLACEHOLDER:</b> If you don’t want game-related work visible to employers, replace this case study with a security lab, backend service, or CLI tool.
+        The structure below still works for any “systems/tooling” project.
+      </div>
+
+      <div class="card mt22">
+        <div class="cardTitle">
+          <h3 class="m0">Links</h3>
+          <div class="meta">Repo / Demo / Media</div>
+        </div>
+        <div class="cardActions">
+          <a class="btn ghost" href="#" onclick="return false;">PLACEHOLDER Repo</a>
+          <a class="btn" href="../assets/img/placeholder.svg" target="_blank" rel="noopener">PLACEHOLDER Demo video</a>
+        </div>
+      </div>
+
+      <h2>1) Problem</h2>
+      <p>
+        I needed a reliable way to add/adjust behaviors in a legacy Java client where internal names and structures can change between releases
+        (including obfuscation). Manual updates were slow and brittle.
+      </p>
+
+      <h2>2) Goals &amp; constraints</h2>
+      <ul>
+        <li><b>Stable hooks</b> despite renamed/obfuscated methods</li>
+        <li><b>Safe failures</b> (don’t crash the client if a hook changes)</li>
+        <li><b>Fast iteration</b>: clear logs, reproducible builds, easy version bumps</li>
+        <li class="small">Constraints: obfuscation changes, limited observability, client-side constraints.</li>
+      </ul>
+
+      <h2>3) Solution overview</h2>
+      <p>
+        I built a small tooling approach around bytecode instrumentation and modular patches.
+        Each patch targets a narrow behavior, validates it’s hooking the expected signature, and logs clearly on success/failure.
+        When upstream changes happen, the update process becomes “find renamed symbol → update mapping → rebuild,” rather than rewriting logic.
+      </p>
+
+      <div class="callout placeholder">
+        <b>PLACEHOLDER:</b> Add an architecture diagram (Patch loader → Module registry → Hook points → Runtime behavior).
+      </div>
+
+      <h2>4) Key technical highlights</h2>
+      <ul>
+        <li><b>Instrumentation pipeline:</b> isolated patch units, load-order control, and safety guards.</li>
+        <li><b>Compatibility strategy:</b> centralized mapping updates for obfuscation bumps.</li>
+        <li><b>Crash resistance:</b> try/catch around mounts + explicit logging of hook success/failure.</li>
+        <li><b>Packaging:</b> consistent build outputs and manifests (so artifacts run predictably).</li>
+      </ul>
+
+      <h2>5) Hard problems &amp; how I solved them</h2>
+      <ul>
+        <li><b>Challenge:</b> upstream renamed internals causing hooks to fail → <b>Fix:</b> mapping-based updates + verification checks → <b>Result:</b> faster updates, fewer regressions.</li>
+        <li class="small"><b>PLACEHOLDER:</b> Add one “deep debugging” story with screenshots/log snippets (sanitized).</li>
+      </ul>
+
+      <h2>6) Results</h2>
+      <ul>
+        <li>More maintainable patch system with predictable update workflow.</li>
+        <li class="small"><b>PLACEHOLDER:</b> Add metrics (time-to-update, crash reduction, or performance improvements).</li>
+      </ul>
+
+      <h2>7) Security considerations</h2>
+      <ul>
+        <li><b>Least privilege mindset:</b> narrow hook scope and avoid broad interception when unnecessary.</li>
+        <li><b>Safe defaults:</b> disable modules when verification fails.</li>
+      </ul>
+
+      <h2>8) What I’d do next</h2>
+      <ul>
+        <li>Automated verification harness for detecting broken hooks earlier</li>
+        <li>Better observability tooling (structured logs, diagnostics bundle)</li>
+      </ul>
+
+      <h2>9) Media</h2>
+      <div class="grid">
+        <div class="card col-12">
+          <img src="../assets/img/placeholder.svg" alt="PLACEHOLDER screenshot" />
+          <p class="small mt12">PLACEHOLDER caption: architecture diagram or before/after behavior.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footerInner">
+      <div>
+        <div style="font-weight:700; color: var(--text);">Daniel Kline</div>
+        <div class="mt8">Software Engineer (CS/Cybersecurity) · Brooklyn Park, MN</div>
+        <div class="mt12 footerLinks">
+          <a href="mailto:danielskline@outlook.com">danielskline@outlook.com</a>
+          <a href="https://www.linkedin.com/in/daniel-kline-789586364/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/DanielSK-Dev" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <div class="small" style="max-width:52ch;">
+        <div class="callout placeholder">
+          <b>PLACEHOLDER:</b> Add analytics / privacy policy only if you actually use tracking.
+          Otherwise keep it simple.
+        </div>
+        <div class="mt12">© <span id="year"></span> Daniel Kline</div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</main>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

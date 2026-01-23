@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Resume + Contact — Daniel Kline</title>
+
+  <meta name="description" content="Daniel Kline — CS + Cybersecurity. Code-first projects: P2P networking, tooling, reverse engineering, and software engineering." />
+  <meta property="og:title" content="Resume + Contact — Daniel Kline" />
+  <meta property="og:description" content="Code-first projects and case studies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../assets/img/placeholder.svg" />
+
+  <link rel="icon" href="../assets/img/placeholder.svg" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<header class="nav">
+  <div class="container">
+    <div class="navInner">
+      <a class="brand" href="../index.html">
+        <span class="brandDot" aria-hidden="true"></span>
+        <span>Daniel Kline</span>
+      </a>
+
+      <nav class="navLinks" aria-label="Primary">
+        <a data-nav href="../index.html">Home</a>
+        <a data-nav href="../projects/index.html">Projects</a>
+        <a data-nav href="../skills/index.html">Skills</a>
+        <a data-nav href="../resume/index.html">Resume + Contact</a>
+      </nav>
+
+      <div class="navActions">
+        <button id="themeToggle" class="btn iconBtn ghost" aria-label="Switch to light mode" title="Toggle theme">
+          <span aria-hidden="true">🌓</span>
+        </button>
+        <button id="mobileToggle" class="btn iconBtn hamburger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu" title="Menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobileMenu" aria-label="Mobile">
+      <a data-nav href="../index.html">Home</a>
+      <a data-nav href="../projects/index.html">Projects</a>
+      <a data-nav href="../skills/index.html">Skills</a>
+      <a data-nav href="../resume/index.html">Resume + Contact</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h1 class="sectionTitle">Resume + Contact</h1>
+    <p class="sectionLead">
+      Quick info below, plus a downloadable PDF resume.
+    </p>
+
+    <div class="grid">
+      <div class="card col-6">
+        <div class="cardTitle"><h3>Contact</h3></div>
+        <p class="m0">
+          <b>Email:</b> <a href="mailto:danielskline@outlook.com">danielskline@outlook.com</a><br/>
+          <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/daniel-kline-789586364/" target="_blank" rel="noopener">daniel-kline-789586364</a><br/>
+          <b>GitHub:</b> <a href="https://github.com/DanielSK-Dev" target="_blank" rel="noopener">DanielSK-Dev</a><br/>
+          <b>Location:</b> Brooklyn Park, MN<br/>
+          <b>Timezone:</b> Central (America/Chicago)
+        </p>
+
+        <div class="callout placeholder mt16">
+          <b>OPTIONAL / PLACEHOLDER:</b> Add your phone number here if you want it public.<br/>
+          <button class="btn mt12" data-copy="PLACEHOLDER PHONE">Copy phone (PLACEHOLDER)</button>
+        </div>
+
+        <hr class="hr" />
+
+        <div class="cardTitle"><h3>Open to</h3><div class="meta">PLACEHOLDER</div></div>
+        <div class="pills mt12">
+          <span class="pill">Software Engineering (Entry-level)</span>
+          <span class="pill">Security Engineering (Entry-level)</span>
+          <span class="pill">Backend / Systems</span>
+          <span class="pill">PLACEHOLDER: Remote / Hybrid / On-site</span>
+        </div>
+      </div>
+
+      <div class="card col-6">
+        <div class="cardTitle"><h3>Resume PDF</h3><div class="meta">Embed + Download</div></div>
+
+        <div class="callout placeholder">
+          <b>PLACEHOLDER:</b> Put your resume PDF at:<br/>
+          <code>assets/resume/Daniel_Kline_Resume.pdf</code><br/>
+          Then this embed + download link will work automatically.
+        </div>
+
+        <div class="cardActions mt16">
+          <a class="btn primary" href="../assets/resume/Daniel_Kline_Resume.pdf" download>Download PDF</a>
+          <a class="btn" href="../assets/resume/Daniel_Kline_Resume.pdf" target="_blank" rel="noopener">Open PDF</a>
+        </div>
+
+        <div class="mt16" style="border:1px solid var(--border); border-radius: 18px; overflow:hidden; background: rgba(255,255,255,.03);">
+          <iframe title="Resume PDF" src="../assets/resume/Daniel_Kline_Resume.pdf" style="width:100%; height: 560px; border:0;">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="card col-12">
+        <div class="cardTitle"><h3>Quick resume (HTML)</h3><div class="meta">Searchable summary</div></div>
+        <div class="grid">
+          <div class="col-6">
+            <h3 class="m0">Education</h3>
+            <p class="mt12">
+              <b>University of Northwestern – St. Paul</b><br/>
+              B.S. Computer Science + B.S. Cybersecurity &amp; Information Systems<br/>
+              Graduated: Dec 19, 2025 · <b>Cum Laude</b>
+            </p>
+          </div>
+
+          <div class="col-6">
+            <h3 class="m0">Highlight project</h3>
+            <p class="mt12">
+              <b>Churp</b> — Peer-to-peer messaging framework (Python).<br/>
+              JSON messaging + NAT traversal (UDP hole punching).<br/>
+              <a href="../projects/churp.html">Read the case study →</a>
+            </p>
+          </div>
+
+          <div class="col-12">
+            <hr class="hr" />
+          </div>
+
+          <div class="col-6">
+            <h3 class="m0">Experience</h3>
+            <p class="mt12">
+              <b>Froggy Hops — Inflatable Rental Operations</b> (Seasonal, Mar 2021–Present)<br/>
+              Driver / Warehouse / Acting Lead / Trainer. Led small teams, handled inventory tracking, solved on-site issues,
+              and trained new staff.
+            </p>
+            <div class="callout placeholder mt16">
+              <b>PLACEHOLDER:</b> Add 2–3 achievement bullets (numbers help): deliveries/week, team size, efficiency improvements, etc.
+            </div>
+          </div>
+
+          <div class="col-6">
+            <h3 class="m0">Core skills</h3>
+            <div class="pills mt12">
+              <span class="pill">Python</span>
+              <span class="pill">Java</span>
+              <span class="pill">C++</span>
+              <span class="pill">Networking</span>
+              <span class="pill">Security mindset</span>
+              <span class="pill">Git</span>
+              <span class="pill">Wireshark</span>
+              <span class="pill">Nmap</span>
+              <span class="pill">Active Directory</span>
+              <span class="pill">PowerShell</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footerInner">
+      <div>
+        <div style="font-weight:700; color: var(--text);">Daniel Kline</div>
+        <div class="mt8">Software Engineer (CS/Cybersecurity) · Brooklyn Park, MN</div>
+        <div class="mt12 footerLinks">
+          <a href="mailto:danielskline@outlook.com">danielskline@outlook.com</a>
+          <a href="https://www.linkedin.com/in/daniel-kline-789586364/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/DanielSK-Dev" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <div class="small" style="max-width:52ch;">
+        <div class="callout placeholder">
+          <b>PLACEHOLDER:</b> Add analytics / privacy policy only if you actually use tracking.
+          Otherwise keep it simple.
+        </div>
+        <div class="mt12">© <span id="year"></span> Daniel Kline</div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</main>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

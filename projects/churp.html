@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Churp — Case Study</title>
+
+  <meta name="description" content="Daniel Kline — CS + Cybersecurity. Code-first projects: P2P networking, tooling, reverse engineering, and software engineering." />
+  <meta property="og:title" content="Churp — Case Study" />
+  <meta property="og:description" content="Code-first projects and case studies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../assets/img/placeholder.svg" />
+
+  <link rel="icon" href="../assets/img/placeholder.svg" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<header class="nav">
+  <div class="container">
+    <div class="navInner">
+      <a class="brand" href="../index.html">
+        <span class="brandDot" aria-hidden="true"></span>
+        <span>Daniel Kline</span>
+      </a>
+
+      <nav class="navLinks" aria-label="Primary">
+        <a data-nav href="../index.html">Home</a>
+        <a data-nav href="../projects/index.html">Projects</a>
+        <a data-nav href="../skills/index.html">Skills</a>
+        <a data-nav href="../resume/index.html">Resume + Contact</a>
+      </nav>
+
+      <div class="navActions">
+        <button id="themeToggle" class="btn iconBtn ghost" aria-label="Switch to light mode" title="Toggle theme">
+          <span aria-hidden="true">🌓</span>
+        </button>
+        <button id="mobileToggle" class="btn iconBtn hamburger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu" title="Menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobileMenu" aria-label="Mobile">
+      <a data-nav href="../index.html">Home</a>
+      <a data-nav href="../projects/index.html">Projects</a>
+      <a data-nav href="../skills/index.html">Skills</a>
+      <a data-nav href="../resume/index.html">Resume + Contact</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <div class="prose">
+      <div class="kicker"><span aria-hidden="true">🛰️</span><span>Case Study</span></div>
+      <h1>Churp — Peer-to-Peer Messenger Framework</h1>
+      <p class="small m0">Timeline: PLACEHOLDER (e.g., Aug–Dec 2025) · Role: Built all code; partner helped with theory/requirements.</p>
+
+      <div class="card mt22">
+        <div class="cardTitle">
+          <h3 class="m0">Links</h3>
+          <div class="meta">Repo / Demo / Media</div>
+        </div>
+        <div class="cardActions">
+          <a class="btn primary" href="https://github.com/DanielSK-Dev/Churp" target="_blank" rel="noopener">Repo</a>
+          <a class="btn" href="../assets/img/placeholder.svg" target="_blank" rel="noopener">PLACEHOLDER Demo video</a>
+          <a class="btn ghost" href="../assets/img/placeholder.svg" target="_blank" rel="noopener">PLACEHOLDER Screenshots</a>
+        </div>
+        <div class="callout placeholder mt16">
+          <b>PLACEHOLDER:</b> Replace the placeholder links with your real demo video (YouTube/Drive) and screenshots.
+        </div>
+      </div>
+
+      <h2>1) Problem</h2>
+      <p>
+        I wanted a reusable peer-to-peer messaging framework that could send structured data between two clients
+        without requiring deep networking knowledge every time I reused it.
+        The biggest blocker for real-world usability was NAT/firewall friction — many users can’t easily port-forward.
+      </p>
+
+      <h2>2) Goals &amp; constraints</h2>
+      <ul>
+        <li><b>Reusable</b> framework (not just a one-off app)</li>
+        <li><b>Structured payloads</b> (JSON messages, consistent schema)</li>
+        <li><b>Practical connectivity</b> through NAT traversal techniques</li>
+        <li><b>Debuggable</b>: logs, clear state transitions, predictable failure modes</li>
+        <li class="small">Constraints: consumer NATs, different networks, limited time (capstone timeline)</li>
+      </ul>
+
+      <h2>3) Solution overview</h2>
+      <p>
+        Churp is a framework that establishes a peer connection and sends messages as JSON objects.
+        It includes connection setup steps, message serialization/deserialization, and a clean API for adding message types.
+        For NAT traversal, it uses <b>UDP hole punching</b> (with a coordination step) so peers can connect in more common home network setups
+        without manual port forwarding in many cases.
+      </p>
+
+      <div class="callout placeholder">
+        <b>PLACEHOLDER:</b> Add a simple architecture diagram here (Client A ↔ NAT ↔ Internet ↔ NAT ↔ Client B, with a rendezvous/coordination step).
+      </div>
+
+      <h2>4) Key technical highlights</h2>
+      <ul>
+        <li><b>Protocol design:</b> defined message envelopes and versioning to keep payloads consistent.</li>
+        <li><b>State machine:</b> explicit connection phases (init → rendezvous → punch → active → teardown).</li>
+        <li><b>Input validation:</b> reject malformed JSON and unexpected message types safely.</li>
+        <li><b>Logging strategy:</b> actionable logs for connectivity and parsing failures.</li>
+      </ul>
+
+      <h2>5) Hard problems &amp; how I solved them</h2>
+      <ul>
+        <li><b>Challenge:</b> unreliable connection attempts across NATs → <b>Investigation:</b> analyzed packet flow + timeouts → <b>Fix:</b> retries/backoff + clearer phases → <b>Result:</b> more consistent connect behavior.</li>
+        <li><b>Challenge:</b> ambiguous failures when peers disagree on message format → <b>Fix:</b> strict schema checks + helpful error responses.</li>
+        <li class="small"><b>PLACEHOLDER:</b> Replace these with your actual best debugging stories (what broke + how you proved the fix).</li>
+      </ul>
+
+      <h2>6) Results</h2>
+      <ul>
+        <li>Working P2P framework with JSON messaging and a clean API for message types.</li>
+        <li class="small"><b>PLACEHOLDER:</b> Add metrics (connect success rate, latency, throughput, or demo outcomes).</li>
+      </ul>
+
+      <h2>7) Security considerations</h2>
+      <ul>
+        <li><b>Abuse resistance:</b> validate payload size/type; reject unknown message types.</li>
+        <li><b>Trust boundaries:</b> treat all inbound messages as untrusted.</li>
+        <li class="small"><b>PLACEHOLDER:</b> If you added authentication/handshake tokens, document it here.</li>
+      </ul>
+
+      <h2>8) What I’d do next</h2>
+      <ul>
+        <li>Optional encryption (e.g., key exchange + secure channel)</li>
+        <li>Better NAT traversal coverage (TURN/relay fallback)</li>
+        <li>Packaging + CLI tools for quick usage</li>
+      </ul>
+
+      <h2>9) Media</h2>
+      <div class="grid">
+        <div class="card col-6">
+          <img src="../assets/img/placeholder.svg" alt="PLACEHOLDER screenshot" />
+          <p class="small mt12">PLACEHOLDER caption: connection setup / messaging demo.</p>
+        </div>
+        <div class="card col-6">
+          <img src="../assets/img/placeholder.svg" alt="PLACEHOLDER screenshot" />
+          <p class="small mt12">PLACEHOLDER caption: architecture diagram / logs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footerInner">
+      <div>
+        <div style="font-weight:700; color: var(--text);">Daniel Kline</div>
+        <div class="mt8">Software Engineer (CS/Cybersecurity) · Brooklyn Park, MN</div>
+        <div class="mt12 footerLinks">
+          <a href="mailto:danielskline@outlook.com">danielskline@outlook.com</a>
+          <a href="https://www.linkedin.com/in/daniel-kline-789586364/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/DanielSK-Dev" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <div class="small" style="max-width:52ch;">
+        <div class="callout placeholder">
+          <b>PLACEHOLDER:</b> Add analytics / privacy policy only if you actually use tracking.
+          Otherwise keep it simple.
+        </div>
+        <div class="mt12">© <span id="year"></span> Daniel Kline</div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</main>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

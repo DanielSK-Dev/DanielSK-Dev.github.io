@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Horizon’s Embrace — Case Study</title>
+
+  <meta name="description" content="Daniel Kline — CS + Cybersecurity. Code-first projects: P2P networking, tooling, reverse engineering, and software engineering." />
+  <meta property="og:title" content="Horizon’s Embrace — Case Study" />
+  <meta property="og:description" content="Code-first projects and case studies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../assets/img/placeholder.svg" />
+
+  <link rel="icon" href="../assets/img/placeholder.svg" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+<header class="nav">
+  <div class="container">
+    <div class="navInner">
+      <a class="brand" href="../index.html">
+        <span class="brandDot" aria-hidden="true"></span>
+        <span>Daniel Kline</span>
+      </a>
+
+      <nav class="navLinks" aria-label="Primary">
+        <a data-nav href="../index.html">Home</a>
+        <a data-nav href="../projects/index.html">Projects</a>
+        <a data-nav href="../skills/index.html">Skills</a>
+        <a data-nav href="../resume/index.html">Resume + Contact</a>
+      </nav>
+
+      <div class="navActions">
+        <button id="themeToggle" class="btn iconBtn ghost" aria-label="Switch to light mode" title="Toggle theme">
+          <span aria-hidden="true">🌓</span>
+        </button>
+        <button id="mobileToggle" class="btn iconBtn hamburger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu" title="Menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobileMenu" aria-label="Mobile">
+      <a data-nav href="../index.html">Home</a>
+      <a data-nav href="../projects/index.html">Projects</a>
+      <a data-nav href="../skills/index.html">Skills</a>
+      <a data-nav href="../resume/index.html">Resume + Contact</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <div class="prose">
+      <div class="kicker"><span aria-hidden="true">🌌</span><span>Case Study</span></div>
+      <h1>Horizon&apos;s Embrace</h1>
+      <p class="small m0">Timeline: PLACEHOLDER · Role: PLACEHOLDER · Stack: PLACEHOLDER</p>
+
+      <div class="callout placeholder mt22">
+        <b>PLACEHOLDER:</b> Fill this in with the most employer-relevant angle:
+        architecture decisions, performance improvements, tooling, testing, build/release process, or a subsystem you’re proud of.
+      </div>
+
+      <h2>1) Problem</h2>
+      <p>PLACEHOLDER: What were you building? What pain/problem did you solve?</p>
+
+      <h2>2) Goals &amp; constraints</h2>
+      <ul>
+        <li>PLACEHOLDER: performance target (FPS/load time)</li>
+        <li>PLACEHOLDER: platform constraints</li>
+        <li>PLACEHOLDER: time constraints</li>
+      </ul>
+
+      <h2>3) Solution overview</h2>
+      <p>PLACEHOLDER: 5–10 sentences on how it works.</p>
+
+      <h2>4) Key technical highlights</h2>
+      <ul>
+        <li>PLACEHOLDER: component system / ECS / state machine / save system</li>
+        <li>PLACEHOLDER: tooling / editor / pipeline</li>
+        <li>PLACEHOLDER: profiling / optimization</li>
+      </ul>
+
+      <h2>5) Hard problems &amp; how I solved them</h2>
+      <ul>
+        <li>PLACEHOLDER: challenge → investigation → fix → result</li>
+      </ul>
+
+      <h2>6) Results</h2>
+      <ul>
+        <li>PLACEHOLDER: measurable improvements</li>
+      </ul>
+
+      <h2>7) Security considerations</h2>
+      <ul>
+        <li>PLACEHOLDER: safe file parsing, sandboxing, validation, etc.</li>
+      </ul>
+
+      <h2>8) What I’d do next</h2>
+      <ul>
+        <li>PLACEHOLDER: roadmap</li>
+      </ul>
+
+      <h2>9) Media</h2>
+      <div class="grid">
+        <div class="card col-6">
+          <img src="../assets/img/placeholder.svg" alt="PLACEHOLDER screenshot" />
+          <p class="small mt12">PLACEHOLDER caption</p>
+        </div>
+        <div class="card col-6">
+          <img src="../assets/img/placeholder.svg" alt="PLACEHOLDER screenshot" />
+          <p class="small mt12">PLACEHOLDER caption</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footerInner">
+      <div>
+        <div style="font-weight:700; color: var(--text);">Daniel Kline</div>
+        <div class="mt8">Software Engineer (CS/Cybersecurity) · Brooklyn Park, MN</div>
+        <div class="mt12 footerLinks">
+          <a href="mailto:danielskline@outlook.com">danielskline@outlook.com</a>
+          <a href="https://www.linkedin.com/in/daniel-kline-789586364/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/DanielSK-Dev" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <div class="small" style="max-width:52ch;">
+        <div class="callout placeholder">
+          <b>PLACEHOLDER:</b> Add analytics / privacy policy only if you actually use tracking.
+          Otherwise keep it simple.
+        </div>
+        <div class="mt12">© <span id="year"></span> Daniel Kline</div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</main>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

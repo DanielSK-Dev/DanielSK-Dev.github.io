@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Daniel Kline — Portfolio</title>
+
+  <meta name="description" content="Daniel Kline — CS + Cybersecurity. Code-first projects: P2P networking, tooling, reverse engineering, and software engineering." />
+  <meta property="og:title" content="Daniel Kline — Portfolio" />
+  <meta property="og:description" content="Code-first projects and case studies." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/placeholder.svg" />
+
+  <link rel="icon" href="assets/img/placeholder.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+<header class="nav">
+  <div class="container">
+    <div class="navInner">
+      <a class="brand" href="index.html">
+        <span class="brandDot" aria-hidden="true"></span>
+        <span>Daniel Kline</span>
+      </a>
+
+      <nav class="navLinks" aria-label="Primary">
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="projects/index.html">Projects</a>
+        <a data-nav href="skills/index.html">Skills</a>
+        <a data-nav href="resume/index.html">Resume + Contact</a>
+      </nav>
+
+      <div class="navActions">
+        <button id="themeToggle" class="btn iconBtn ghost" aria-label="Switch to light mode" title="Toggle theme">
+          <span aria-hidden="true">🌓</span>
+        </button>
+        <button id="mobileToggle" class="btn iconBtn hamburger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu" title="Menu">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobileMenu" aria-label="Mobile">
+      <a data-nav href="index.html">Home</a>
+      <a data-nav href="projects/index.html">Projects</a>
+      <a data-nav href="skills/index.html">Skills</a>
+      <a data-nav href="resume/index.html">Resume + Contact</a>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="heroGrid">
+      <div class="heroCard">
+        <div class="kicker">
+          <span aria-hidden="true">⚡</span>
+          <span>Software Engineer (CS/Cybersecurity) · Brooklyn Park, MN</span>
+        </div>
+
+        <h1 class="hTitle">I build reliable software with a security mindset.</h1>
+        <p class="hLead">
+          I’m Daniel Kline — a code-first builder focused on practical systems: networking, automation, and clean, debuggable engineering.
+          I like projects that have real constraints and measurable results.
+        </p>
+
+        <div class="heroBtns">
+          <a class="btn primary" href="resume/index.html">View Resume</a>
+          <a class="btn" href="projects/index.html">Projects</a>
+          <a class="btn ghost" href="https://github.com/DanielSK-Dev" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/daniel-kline-789586364/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+
+        <div class="proofList" aria-label="Quick proof points">
+          <div class="proof">
+            <b>Languages</b>
+            <span>Python · Java · C++ <span class="small">(plus HTML/CSS/JS)</span></span>
+          </div>
+          <div class="proof">
+            <b>Strength</b>
+            <span>Problem-solving through code: debug, profile, refactor, ship</span>
+          </div>
+          <div class="proof">
+            <b>Built</b>
+            <span><b>Churp</b>: a peer-to-peer messenger framework with NAT traversal</span>
+          </div>
+          <div class="proof">
+            <b>Comfortable with</b>
+            <span>Reverse engineering · automation · networking fundamentals</span>
+          </div>
+        </div>
+
+        <div class="badgeRow" aria-label="Focus areas">
+          <span class="badge"><span class="dot"></span> Software Engineering</span>
+          <span class="badge good"><span class="dot"></span> Networking</span>
+          <span class="badge"><span class="dot"></span> Security mindset</span>
+          <span class="badge warn"><span class="dot"></span> Always learning</span>
+        </div>
+      </div>
+
+      <div class="heroCard">
+        <h2 class="m0" style="font-size:18px; letter-spacing:-.02em;">Featured</h2>
+        <p class="mt12" style="color: var(--muted); line-height:1.65;">
+          Three projects that best show how I think and build.
+        </p>
+
+        <div class="mt16" style="display:grid; gap:12px;">
+          <a class="card soft" href="projects/churp.html">
+            <div class="cardTitle">
+              <h3>Churp</h3>
+              <div class="meta">Capstone · P2P</div>
+            </div>
+            <p>Peer-to-peer messaging framework with JSON transport + NAT traversal.</p>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">Sockets</span><span class="tag">UDP hole punching</span>
+            </div>
+          </a>
+
+          <a class="card soft" href="projects/spiral-mods.html">
+            <div class="cardTitle">
+              <h3>Reverse-Engineering Tooling</h3>
+              <div class="meta">Systems/Tooling</div>
+            </div>
+            <p>Java instrumentation mods + packaging pipeline; maintaining compatibility across obfuscation bumps.</p>
+            <div class="tags">
+              <span class="tag">Java</span><span class="tag">Instrumentation</span><span class="tag">Debugging</span>
+            </div>
+          </a>
+
+          <a class="card soft" href="projects/horizons-embrace.html">
+            <div class="cardTitle">
+              <h3>Horizon&apos;s Embrace</h3>
+              <div class="meta">Game project</div>
+            </div>
+            <p>PLACEHOLDER: Add your best “software engineering” angle (architecture, performance, tooling, etc.).</p>
+            <div class="tags">
+              <span class="tag">PLACEHOLDER</span><span class="tag">Gameplay</span><span class="tag">Tooling</span>
+            </div>
+          </a>
+        </div>
+
+        <hr class="hr" />
+
+        <div class="callout placeholder">
+          <b>PLACEHOLDER:</b> Replace the “Featured” set if you prefer a more employer-friendly selection.
+          You can swap the game/mod projects for a security lab or production-style app.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section compact">
+    <h2 class="sectionTitle">About</h2>
+    <p class="sectionLead">
+      I graduated <b>Dec 19, 2025 (Cum Laude)</b> from <b>University of Northwestern – St. Paul</b> with a B.S. in <b>Computer Science</b>
+      and a second B.S. in <b>Cybersecurity &amp; Information Systems</b>.
+      I enjoy building systems that are testable, maintainable, and secure by default.
+    </p>
+
+    <div class="grid">
+      <div class="card col-6">
+        <div class="cardTitle"><h3>What I like working on</h3></div>
+        <div class="pills">
+          <span class="pill">Networking &amp; protocols</span>
+          <span class="pill">Automation &amp; tooling</span>
+          <span class="pill">Debugging / profiling</span>
+          <span class="pill">Security-minded engineering</span>
+          <span class="pill">Clean architecture</span>
+        </div>
+      </div>
+
+      <div class="card col-6">
+        <div class="cardTitle"><h3>Currently looking for</h3></div>
+        <p>
+          Entry-level roles where I can write code daily — software engineering, security engineering, or developer roles
+          with a strong systems/networking component.
+        </p>
+        <div class="callout placeholder mt16">
+          <b>PLACEHOLDER:</b> Add your preferred role titles and location preferences (remote/hybrid/in-person).
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footerInner">
+      <div>
+        <div style="font-weight:700; color: var(--text);">Daniel Kline</div>
+        <div class="mt8">Software Engineer (CS/Cybersecurity) · Brooklyn Park, MN</div>
+        <div class="mt12 footerLinks">
+          <a href="mailto:danielskline@outlook.com">danielskline@outlook.com</a>
+          <a href="https://www.linkedin.com/in/daniel-kline-789586364/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/DanielSK-Dev" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <div class="small" style="max-width:52ch;">
+        <div class="callout placeholder">
+          <b>PLACEHOLDER:</b> Add analytics / privacy policy only if you actually use tracking.
+          Otherwise keep it simple.
+        </div>
+        <div class="mt12">© <span id="year"></span> Daniel Kline</div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</main>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
