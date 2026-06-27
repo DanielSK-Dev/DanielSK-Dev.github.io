@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- PLACEHOLDER: Replace example.com with your GitHub Pages URL or custom domain -->
-  <url><loc>https://example.com/</loc></url>
-  <url><loc>https://example.com/projects/</loc></url>
-  <url><loc>https://example.com/projects/churp.html</loc></url>
-  <url><loc>https://example.com/projects/spiral-mods.html</loc></url>
-  <url><loc>https://example.com/projects/horizons-embrace.html</loc></url>
-  <url><loc>https://example.com/projects/security-project.html</loc></url>
-  <url><loc>https://example.com/skills/</loc></url>
-  <url><loc>https://example.com/resume/</loc></url>
+  <url><loc>https://danielsk-dev.github.io/</loc></url>
+  <url><loc>https://danielsk-dev.github.io/projects/</loc></url>
+  <url><loc>https://danielsk-dev.github.io/projects/churp.html</loc></url>
+  <url><loc>https://danielsk-dev.github.io/projects/spiral-mods.html</loc></url>
+  <url><loc>https://danielsk-dev.github.io/skills/</loc></url>
+  <url><loc>https://danielsk-dev.github.io/resume/</loc></url>
 </urlset>

@@ -1,30 +1,21 @@
 # Daniel Kline — GitHub Pages Portfolio
 
-This is a static site meant to be hosted on GitHub Pages.
+Static portfolio site (plain HTML/CSS/JS, no build step) hosted on GitHub Pages.
 
-## What to edit first (search for `PLACEHOLDER`)
-- `index.html` (Featured projects + role preference)
-- `projects/index.html` (project list + links)
-- `projects/churp.html` (add real timeline + screenshots/video + results)
-- `projects/security-project.html` (replace with your real security build)
-- `resume/index.html` (add resume PDF + optional phone)
+## Structure
+- `index.html` — home (hero, featured projects, about)
+- `projects/index.html` — projects (Churp, Budget Tracker, Systems & Tooling, Home Lab)
+- `projects/churp.html`, `projects/spiral-mods.html` — case studies
+- `skills/index.html` — skills
+- `resume/index.html` — resume + contact (embeds `assets/resume/Daniel_Kline_Resume.pdf`)
 
-## Add your resume PDF
-Put your PDF here:
-`assets/resume/Daniel_Kline_Resume.pdf`
+## Updating the resume PDF
+Replace `assets/resume/Daniel_Kline_Resume.pdf` with the latest version (same filename) and the embed/download links update automatically.
 
 ## GitHub Pages setup
-### Option A: User/Org site
-Create a repo named:
-`<your-username>.github.io`
-Push these files to the root, then enable Pages (usually automatic).
-
-### Option B: Project site
-Push these files to a repo (any name).
-In GitHub:
-Settings → Pages → Build and deployment → Deploy from branch → select `main` and `/ (root)`.
+This is a user site: repo named `DanielSK-Dev.github.io`, served from the repo root.
+Push to `main`; Pages builds automatically.
 
 ## Notes
-- This site uses only plain HTML/CSS/JS (no build step).
-- Dark/light mode toggle is included.
-- Uses relative links so it works in project-pages subpaths.
+- Dark/light mode toggle and mobile nav included (`assets/js/main.js`).
+- Relative links throughout.
